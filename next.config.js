@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
+    if (process.env.VERCEL) {
+      return []
+    }
     return [
       {
         source: '/api/py/:path*',
