@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "functions": {
+    "api/index.py": {
+      "runtime": "@vercel/python@4.1.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/py/:path*", "destination": "/api/index.py" }
+  ]
+}
